@@ -1,13 +1,13 @@
-const name = 'Chris';
+doSummerChores("Chris");
 
-function mowYard(callback) {
+function mowYard(name, callback) {
   setTimeout(() => {
     console.log(`${name} mowed the yard`);
     callback();
   }, 2000);
 }
 
-function weedEat(callback) {
+function weedEat(name, callback) {
   setTimeout(() => {
     const chanceComplete = Math.random() >= 0.2;
     if (chanceComplete) {
@@ -19,7 +19,7 @@ function weedEat(callback) {
   }, 1500);
 }
 
-function trimHedges(callback) {
+function trimHedges(name, callback) {
   setTimeout(() => {
     const chanceComplete = Math.random() >= 0.2;
     if (chanceComplete) {
@@ -31,7 +31,7 @@ function trimHedges(callback) {
   }, 1000);
 }
 
-function collecWood(callback) {
+function collectWood(name, callback) {
     setTimeout(() => {
         const chanceComplete = Math.random() >= 0.2;
         if (chanceComplete) {
@@ -44,7 +44,7 @@ function collecWood(callback) {
     }, 2500);
 }
 
-function waterGarden(callback) {
+function waterGarden(name, callback) {
     setTimeout(() => {
         const chanceComplete = Math.random() >= 0.2;
         if (chanceComplete) {
@@ -56,14 +56,17 @@ function waterGarden(callback) {
     }, 500);
 }
 
-mowYard(() => {
-  weedEat(() => {
-    trimHedges(() => {
-        collecWood(() => {
-            waterGarden(() => {
-                console.log(`${name} finished all their chores!`);
-            })
-        })
-    });
-  });
-});
+    function doSummerChores(name, callback) {
+        mowYard(name, () => {
+          weedEat(name, () => {
+            trimHedges(name, () => {
+              collectWood(name, () => {
+                waterGarden(name, () => {
+                  console.log(`${name} finished all their chores!`);
+                });
+              });
+            });
+          });
+        });
+      }
+      
