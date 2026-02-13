@@ -3,4 +3,4 @@ If a task fails, the chain stops.The theme simulates yard work and the functions
 The sleep function is Math.random. I set the probability set to >= 0.2 over all 4 tasks equaling about a 60% chance of falling asleep before completing all the tasks...
 -Chris
 
-UPDATE 02/11/2026: Added a promisesVersion that uses Promises instead of callbacks thus eliminating "callback hell".
+UPDATE 02/12/2026: Added a promisesVersion that uses Promises instead of callbacks thus eliminating "callback hell".
