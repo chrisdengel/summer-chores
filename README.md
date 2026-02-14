@@ -4,3 +4,5 @@ The sleep function is Math.random. I set the probability set to >= 0.2 over all 
 -Chris
 
 UPDATE 02/12/2026: Added a promisesVersion that uses Promises instead of callbacks thus eliminating "callback hell".
+
+UPDATE 02/12/2026: Added a async/await Version that uses async/await.
